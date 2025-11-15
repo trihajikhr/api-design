@@ -147,7 +147,9 @@ Ada banyak jenis API dan cara mengkategorikannya. Salah satunya adalah berdasark
   Partner API memungkinkan **dua atau lebih perusahaan berbagi data atau fungsionalitas** untuk berkolaborasi dalam suatu proyek.
   API ini **tidak tersedia untuk publik** dan menggunakan mekanisme autentikasi untuk memastikan hanya mitra yang berwenang yang bisa menggunakannya.
 
-![img_1.png](media/img_1.png)
+<div align="center">
+<img src="media/img_1.png">
+</div>
 
 ---
 
@@ -155,45 +157,115 @@ Ada banyak jenis API dan cara mengkategorikannya. Salah satunya adalah berdasark
 
 API juga dapat dikategorikan berdasarkan **gaya arsitektur**. Beberapa gaya arsitektur yang paling sering digunakan adalah:
 
-1. REST — Seperti yang telah dibahas sebelumnya, REST adalah arsitektur API yang paling populer untuk mentransfer data melalui internet. Dalam konteks RESTful, sumber daya dapat diakses melalui **endpoint**, dan operasi dilakukan pada sumber daya tersebut menggunakan HTTP standar seperti **GET, POST, PUT, dan DELETE**.
+1. **REST** <br/> Seperti yang telah dibahas sebelumnya, REST adalah arsitektur API yang paling populer untuk mentransfer data melalui internet. Dalam konteks RESTful, sumber daya dapat diakses melalui **endpoint**, dan operasi dilakukan pada sumber daya tersebut menggunakan HTTP standar seperti **GET, POST, PUT, dan DELETE**.
 
-2. SOAP — (*Simple Object Access Protocol*) menggunakan **XML** untuk mentransfer pesan yang sangat terstruktur antara client dan server. SOAP sering digunakan di lingkungan enterprise atau sistem legacy. Meskipun menawarkan fitur keamanan yang canggih, SOAP bisa lebih lambat dibanding arsitektur API lain.
+2. **SOAP** <br/> Soap (*Simple Object Access Protocol*) menggunakan **XML** untuk mentransfer pesan yang sangat terstruktur antara client dan server. SOAP sering digunakan di lingkungan enterprise atau sistem legacy. Meskipun menawarkan fitur keamanan yang canggih, SOAP bisa lebih lambat dibanding arsitektur API lain.
 
-3. GraphQL — adalah bahasa query open source yang memungkinkan client berinteraksi dengan **satu endpoint API** untuk mengambil data persis yang dibutuhkan, tanpa harus membuat banyak request berantai. Pendekatan ini mengurangi jumlah perjalanan bolak-balik antara client dan server, berguna untuk aplikasi yang berjalan di jaringan lambat atau tidak stabil.
+3. **GraphQL** <br/> GraphQL adalah bahasa query open source yang memungkinkan client berinteraksi dengan **satu endpoint API** untuk mengambil data persis yang dibutuhkan, tanpa harus membuat banyak request berantai. Pendekatan ini mengurangi jumlah perjalanan bolak-balik antara client dan server, berguna untuk aplikasi yang berjalan di jaringan lambat atau tidak stabil.
 
-4. Webhooks — digunakan untuk mengimplementasikan **arsitektur berbasis event**, di mana request dikirim otomatis sebagai respons terhadap pemicu berbasis event.
+4. **Webhooks** <br/> Webhooks digunakan untuk mengimplementasikan **arsitektur berbasis event**, di mana request dikirim otomatis sebagai respons terhadap pemicu berbasis event.
    Contoh: saat terjadi event tertentu di aplikasi—misalnya pembayaran dilakukan—aplikasi dapat mengirim **HTTP request** ke URL webhook yang sudah dikonfigurasi dengan data event di payload request. Sistem penerima webhook kemudian memproses event dan mengambil tindakan yang sesuai.
 
-5. gRPC — (*Remote Procedure Call*) memungkinkan client memanggil server seolah-olah server adalah objek lokal. gRPC dikembangkan oleh Google dan memudahkan komunikasi antara aplikasi dan sistem yang terdistribusi.
+5. **gRPC** <br/> gRPC (*Remote Procedure Call*) memungkinkan client memanggil server seolah-olah server adalah objek lokal. gRPC dikembangkan oleh Google dan memudahkan komunikasi antara aplikasi dan sistem yang terdistribusi.
 
 ---
 
-## 6 |Apa Saja Kasus Penggunaan API yang Umum?
+## 6 | Apa Saja Kasus Penggunaan API yang Umum?
 
 API sangat fleksibel dan mendukung berbagai kasus penggunaan, antara lain:
 
 1. **Integrasi dengan sistem internal dan eksternal** <br/> Salah satu alasan paling umum developer menggunakan API adalah untuk **mengintegrasikan satu sistem dengan sistem lain**.
    Contohnya, kamu bisa menggunakan API untuk menghubungkan **CRM** dengan **sistem otomatisasi pemasaran**, sehingga email pemasaran dapat dikirim secara otomatis ketika seorang sales menambahkan calon pelanggan baru ke CRM.
 
-2. **Menambahkan atau meningkatkan fungsionalitas**
-   API memungkinkan kamu menambahkan **fungsionalitas tambahan** ke aplikasi, yang bisa meningkatkan pengalaman pengguna.
+2. **Menambahkan atau meningkatkan fungsionalitas** <br/> API memungkinkan kamu menambahkan **fungsionalitas tambahan** ke aplikasi, yang bisa meningkatkan pengalaman pengguna.
    Contohnya, pada aplikasi **food delivery**, kamu bisa mengintegrasikan API peta pihak ketiga agar pengguna bisa **melacak pesanan** mereka secara real-time.
 
-3. **Menghubungkan perangkat IoT**
-   API sangat penting dalam ekosistem **Internet of Things (IoT)**, yang mencakup perangkat seperti jam pintar, tracker kebugaran, bel pintu, dan peralatan rumah tangga.
+3. **Menghubungkan perangkat IoT** <br/> API sangat penting dalam ekosistem **Internet of Things (IoT)**, yang mencakup perangkat seperti jam pintar, tracker kebugaran, bel pintu, dan peralatan rumah tangga.
    Tanpa API, perangkat-perangkat ini tidak bisa terhubung ke cloud atau satu sama lain, sehingga fungsinya akan terbatas.
 
-4. **Membuat sistem lebih skalabel**
-   API digunakan untuk membangun **arsitektur berbasis microservices**, di mana aplikasi terdiri dari kumpulan layanan kecil yang berkomunikasi melalui API pribadi.
+4. **Membuat sistem lebih skalabel** <br/> API digunakan untuk membangun **arsitektur berbasis microservices**, di mana aplikasi terdiri dari kumpulan layanan kecil yang berkomunikasi melalui API pribadi.
    Microservices dikelola, di-deploy, dan disiapkan secara independen, sehingga tim bisa **menskalakan sistem secara andal dan efisien biaya**.
 
-5. **Mengurangi biaya**
-   API membantu organisasi **mengurangi biaya operasional** dengan mengotomatiskan tugas yang memakan waktu, seperti mengirim email, mengambil laporan, dan berbagi data antar sistem.
+5. **Mengurangi biaya** <br/> API membantu organisasi **mengurangi biaya operasional** dengan mengotomatiskan tugas yang memakan waktu, seperti mengirim email, mengambil laporan, dan berbagi data antar sistem.
    API juga bisa **mengurangi biaya pengembangan** dengan memungkinkan tim menggunakan fungsionalitas yang sudah ada, tanpa harus membangun dari awal.
 
-6. **Meningkatkan keamanan dan tata kelola organisasi**
-   API mendukung banyak workflow penting untuk **keamanan organisasi**.
-   Contohnya, **single sign-on (SSO)**—yang memungkinkan pengguna memakai satu username dan password untuk beberapa sistem—dimungkinkan berkat API.
-   API juga digunakan untuk **menegakkan dan mengotomatisasi aturan serta kebijakan perusahaan**, misalnya memastikan pengeluaran harus disetujui sebelum karyawan mendapat reimburse.
+6. **Meningkatkan keamanan dan tata kelola organisasi** <br/> API mendukung banyak workflow penting untuk **keamanan organisasi**. Contohnya, **single sign-on (SSO)**—yang memungkinkan pengguna memakai satu username dan password untuk beberapa sistem—dimungkinkan berkat API. API juga digunakan untuk **menegakkan dan mengotomatisasi aturan serta kebijakan perusahaan**, misalnya memastikan pengeluaran harus disetujui sebelum karyawan mendapat reimburse.
 
 Daftar ini tentu **belum lengkap**, dan akan terus berkembang seiring developer menciptakan solusi inovatif yang mengubah cara kita **hidup, bekerja, dan berinteraksi**.
+
+---
+
+## 7 | Contoh API di Dunia Nyata
+
+Jika kamu ingin melihat contoh API nyata, salah satu tempat terbaik untuk memulai adalah **katalog API publik**, seperti **Postman’s Public API Network**.
+
+Public API Network mendukung komunitas lebih dari **40 juta developer** dan merupakan perpustakaan API yang **terorganisir dan bisa dicari**, memudahkanmu menemukan API yang sesuai. Kamu bisa menggunakan fungsi pencarian untuk hal spesifik, atau menjelajahi kategori untuk mendapatkan inspirasi.
+
+Beberapa perusahaan yang menyediakan contoh API hebat di Public API Network antara lain:
+
+* **Salesforce** <br/> Salesforce adalah software CRM berbasis cloud yang memungkinkan pelanggan menemukan dan terhubung dengan customer, menutup penjualan, dan memberikan layanan skala besar. Workspace publik Salesforce mencakup banyak sumber daya API untuk developer di berbagai Salesforce Clouds dan produk.
+
+* **Notion** <br/> Notion adalah aplikasi pencatat yang menyediakan satu ruang untuk berpikir, menulis, dan merencanakan. Tim Notion telah mempublikasikan koleksi API yang sederhana untuk membantu developer mulai berinteraksi dengan Notion API, menyediakan solusi yang **praktis dan up-to-date** untuk menghubungkan dan mengotomatisasi tugas di Notion.
+
+* **Discord** <br/> Discord adalah platform sosial untuk komunikasi berbasis suara, video, dan pesan, serta berbagi media dan file. Tim Discord mempublikasikan koleksi API untuk membantu developer membangun aplikasi Discord dan menyesuaikan server mereka, lengkap dengan panduan pengenalan agar mudah memulai.
+
+* **Pinterest** <br/> Pinterest memungkinkan pengguna berbagi gambar, terhubung satu sama lain, dan mendapatkan inspirasi. API Pinterest memperluas kemampuan developer situs atau aplikasi secara signifikan, dan mereka menyediakan koleksi API untuk mempermudah proses memulai.
+
+* **DoorDash** <br/> DoorDash adalah platform pemesanan dan pengantaran makanan. **DoorDash Drive** memungkinkan penggunaan platform logistik on-demand dan armada Dashers untuk mengantarkan barang dengan cepat dan mudah. Tim DoorDash juga mempublikasikan koleksi API yang membuat developer bisa memulai dengan mudah.
+
+---
+
+## 8 | Pertanyaan Umum Lain tentang API
+
+### 8.1 | Siapa yang bekerja dengan API?
+Meskipun developer adalah yang paling sering bekerja dengan API, laporan *Postman’s State of the API* menemukan bahwa banyak non-developer—seperti **product manager, business analyst, dan profesional customer support**—juga bekerja dengan API.
+
+### 8.2 | Industri mana saja yang menggunakan API?
+API digunakan luas di industri teknologi karena menjadi **blok bangunan utama aplikasi dan layanan digital**.
+
+* **Lembaga keuangan** mengandalkan API untuk memfasilitasi transaksi pelanggan.
+* **Penyedia layanan kesehatan** menggunakan API untuk mengelola data pasien dan menjaga keamanannya.
+
+### 8.3 | Apa itu strategi API-first?
+Strategi **API-first** adalah pendekatan pengembangan perangkat lunak di mana aplikasi dirancang dan dibangun sebagai kumpulan layanan internal dan eksternal yang disediakan melalui API. API menjadi **blok bangunan utama** aplikasi ini, dan strategi API-first membantu tim memprioritaskan **kualitas, keamanan, dan performa**.
+
+### 8.4 | Apa saja tools yang bisa membantu membangun dan mengintegrasikan API?
+Pengembangan API bersifat **iteratif dan kolaboratif**, jadi penting menggunakan alat yang tepat agar semuanya berjalan lancar.
+
+* Gunakan **source control management** seperti GitHub atau BitBucket untuk melacak perubahan API.
+* Gunakan **CI/CD pipeline** seperti Jenkins atau CircleCI untuk mengotomatisasi testing dan deployment API.
+* Gunakan juga **platform API** yang terintegrasi dengan alat-alat ini untuk mengurangi hambatan dan memperlancar workflow yang sudah ada.
+
+### 8.5 | Bagaimana Cara Membangun API?
+
+Proses pengembangan API bisa sangat bervariasi tergantung **tujuan, bahasa, dan cakupan API**. Namun, setiap API baru biasanya perlu:
+
+1. **Dirancang** dengan baik,
+2. **Diimplementasikan** menggunakan framework pengembangan API, dan
+3. **Dites secara menyeluruh** untuk memastikan berfungsi sesuai harapan.
+
+### 8.6 | Apa itu Manajemen API?
+
+Manajemen API adalah praktik untuk **membuat proses yang efisien dan standar dalam bekerja dengan API**. Organisasi yang memprioritaskan manajemen API biasanya menggunakan **platform API** seperti Postman, yang membantu mereka dalam:
+
+* Mendesain, mengembangkan, menguji, mengamankan, men-deploy, dan memantau API secara skala besar.
+
+Manajemen API meningkatkan kolaborasi dengan **mengurangi pekerjaan yang berulang**, meningkatkan **visibilitas proyek terkait API**, dan mendukung **penyelarasan organisasi** yang lebih baik.
+
+### 8.7 | Apa Perbedaan SOAP API dan REST API?
+
+* **SOAP (Simple Object Access Protocol)** menggunakan XML dan memiliki fitur bawaan untuk **keamanan dan penanganan error**, sehingga cocok untuk lingkungan enterprise dengan standar ketat.
+* **REST (Representational State Transfer)** menggunakan JSON untuk representasi sumber daya, lebih ringkas dibanding XML. REST API biasanya lebih mudah **dipahami, digunakan, dan diintegrasikan** dibanding SOAP, meski tidak memiliki beberapa fitur canggih SOAP.
+
+### 8.8 | Apa Perbedaan API dan Webhooks?
+
+* **API tradisional**: client aktif mengirim request ke server untuk mengambil data atau melakukan aksi (*request-response*).
+* **Webhook**: merupakan callback ringan yang mendukung komunikasi berbasis event. Webhook **mendengarkan event tertentu**—misalnya pembuatan akun baru atau pembayaran—dan melakukan aksi yang telah dikonfigurasi secara otomatis. Ini menghilangkan kebutuhan client untuk terus mem-poll server.
+
+### 8.9 | Apa Perbedaan Service-Oriented Architecture (SOA) dan Microservice Architecture?
+
+SOA dan microservices sama-sama terdiri dari layanan modular yang menjalankan fungsi bisnis tertentu, tapi ada beberapa perbedaan utama:
+
+1. **Komunikasi**: microservices saling berkomunikasi melalui API, sedangkan SOA menggunakan **Enterprise Service Bus (ESB)** untuk routing, transformasi, dan manajemen pesan.
+2. **Protokol**: SOA biasanya menggunakan SOAP, sedangkan microservices menggunakan protokol ringan seperti REST.
+3. **Granularitas**: layanan SOA kurang granular dibanding microservices dan bisa saling bergantung satu sama lain.
